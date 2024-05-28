@@ -11,11 +11,7 @@
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
-      },
-      response.writeHead(301, {
-        Location: '<url to redirect>',
-      });
-      res.end();
+      }
     });
   } catch (err) {
     // Handle errors here
